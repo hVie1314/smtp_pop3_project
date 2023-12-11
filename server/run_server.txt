@@ -1,0 +1,1 @@
+java -jar test-mail-server-1.0.jar -s 2225 -p 3335 -m ./
