@@ -1,0 +1,30 @@
+{
+    "General": {
+      "Username": "hoangviet@gmail.com",
+      "Password": "hcmus",
+      "MailServer": "127.0.0.1",
+      "SMTP": 2225,
+      "POP3": 3335,
+      "Autoload": 10
+    },
+    
+    "Filters": [
+      {
+        "From": ["ahihi@testing.com", "ahuu@testing.com"],
+        "Destination_from_folder": "Project"
+      },
+      {
+        "Subject": ["urgent", "ASAP"],
+        "Destination_subject_folder": "Important"
+      },
+      {
+        "Content": ["report", "meeting"],
+        "Destination_content_folder": "Work"
+      },
+      {
+        "Spam": ["virus", "hack", "crack"],
+        "Destination_spam_folder": "Spam"
+      }
+    ]
+  }
+  
