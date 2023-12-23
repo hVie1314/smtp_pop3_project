@@ -237,7 +237,7 @@ def fetch_email(server_address, server_port, username, password, download_path, 
                     email_file.write(email_raw)
                     
             # call function delete email to delete email from server     
-            # delete_emails(client_socket, fetched_emails) 
+            delete_emails(client_socket, fetched_emails) 
             
             client_socket.sendall("QUIT\r\n".encode("utf-8"))
             client_socket.close()
