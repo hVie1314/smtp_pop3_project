@@ -402,7 +402,7 @@ def list_emails(emails_file_path, read_email_list):
 
 
 
-
+# active
 # open email from local machine
 # index: input from user
 def open_email_from_list(emails_list, emails_file_path, read_email_list, index):
