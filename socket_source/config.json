@@ -1,16 +1,16 @@
 {
     "General": {
       "Username": "hoangviet@gmail.com",
-      "Password": "hcmus",
+      "Password": "1234",
       "MailServer": "127.0.0.1",
-      "SMTP": 2225,
-      "POP3": 3335,
-      "Autoload": 10
+      "SMTP": 2500,
+      "POP3": 1100,
+      "Autoload": 30
     },
     
     "Filters": [
       {
-        "From": ["ahihi@testing.com", "ahuu@testing.com"],
+        "From": ["ahihi@testing.com", "hoangviet@gmail.com"],
         "Destination_from_folder": "Project"
       },
       {
