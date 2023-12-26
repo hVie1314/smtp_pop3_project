@@ -44,7 +44,7 @@ def check_and_create_folder(folder_path):
 # create folder in local machine to store emails       
 def create_folders(download_path, username):    
     # create folder email
-    download_path = os.path.join(download_path, '\emails')
+    download_path = os.path.join(download_path, 'emails')
     check_and_create_folder(download_path) 
      
     # create folder user
