@@ -262,10 +262,10 @@ def save_attachment(email_data):
         for part in email_data.walk():
             if part.get('Content-Disposition') is not None:
                 file_name = part.get_filename()
-                option = input(f"This email contains: {file_name} \nDo you want to save it?(Y/N): ").upper()
+                option = input(f"Trong email được đính kèm file : {file_name} \n Bạn có lưu về không ?(Y/N): ").upper()
                 match option:
                     case "Y":
-                        directory = input("Enter directory: ")
+                        directory = input("Nhập đường dẫn để lưu : ")
                         with open(os.path.join(directory, file_name), 'wb') as file:
                             file.write(part.get_payload(decode = True))
                     case "N":
@@ -420,51 +420,3 @@ def open_email_from_list(emails_list, emails_file_path, read_email_list, index):
             print("Invalid index. Please choose a valid index from the list.")
     except Exception as e:
         print(f"Error opening email: {e}")
-
-
-def main():
-    # load data from config.json
-    with open('./config.json', 'r') as config_file:
-        config_data = json.load(config_file)
-        
-    server_address = config_data["General"]["MailServer"]
-    server_pop3_port = config_data["General"]["POP3"]
-    username = config_data["General"]["Username"]
-    password = config_data["General"]["Password"]
-    autoload = config_data["General"]["Autoload"]
-    
-    # set download path
-    download_path = r"D:"
-    # create folder to store email
-    download_path = create_folders(download_path, username) 
-    
-    # set up file and array to store read email
-    # read_email_list_path = os.path.join(download_path, 'emails', username, 'read_email_list.txt')
-    # read_email_list = get_read_email_list(read_email_list_path)
-
-    # create thread to auto fetch email
-    # thread = threading.Thread(target=auto_fetch_email, args=(server_address, server_pop3_port, username, password, download_path, config_data))
-    # thread.daemon = True  
-    # thread.start()
-
-    # fetch_email(server_address, server_pop3_port, username, password, download_path, config_data)
-    
-    download_path = "D:\emails\hoangviet@gmail.com\Inbox"
-    # path = os.path.join(path, "20231222234933854.msg")
-    # read_email(path)
-    
-    
-    read_email_list = get_read_email_list(download_path)
-    # print(read_email_list)
-    
-    # read_email_list = update_read_email_list(read_email_list, download_path, "12345.msg")
-    # print(read_email_list)
-
-    
-    emails_list = list_emails(download_path, read_email_list)
-    index = 1 # input from user
-    open_email_from_list(emails_list, download_path, read_email_list, index)
-    
-if __name__ == "__main__":
-   main()
-   
