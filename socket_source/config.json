@@ -1,0 +1,30 @@
+{
+    "General": {
+      "Username": "hoangviet@gmail.com",
+      "Password": "1234",
+      "MailServer": "127.0.0.1",
+      "SMTP": 2500,
+      "POP3": 1100,
+      "Autoload": 30
+    },
+    
+    "Filters": [
+      {
+        "From": ["ahihi@testing.com", "hoangviet@gmail.com"],
+        "Destination_from_folder": "Project"
+      },
+      {
+        "Subject": ["urgent", "ASAP"],
+        "Destination_subject_folder": "Important"
+      },
+      {
+        "Content": ["report", "meeting"],
+        "Destination_content_folder": "Work"
+      },
+      {
+        "Spam": ["virus", "hack", "crack"],
+        "Destination_spam_folder": "Spam"
+      }
+    ]
+  }
+  
