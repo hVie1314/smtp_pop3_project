@@ -385,7 +385,7 @@ def list_emails(emails_file_path, read_email_list):
                     if (check_email_status(read_email_list, email_id)):
                         print(f"{index}. <{sender}> <{subject}>")
                     else:
-                        print(f"{index}. (chưa đọc) <{sender}> <{subject}>")
+                        print(f"{index}. (unread) <{sender}> <{subject}>")
         
         if not emails_list:
             print("You haven't received any emails in this folder.")
